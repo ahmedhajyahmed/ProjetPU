@@ -1,0 +1,63 @@
+// JDL definition for application 'askAnExpert' generated with command 'jhipster export-jdl'
+
+entity Expert {
+  nom String required,
+  prenom String required,
+  dateNaissance LocalDate,
+  adresse String required,
+  description TextBlob,
+  domaine Domaine required,
+  profession String required,
+  skill1 String required,
+  skill2 String,
+  skill3 String,
+  prix Long required,
+  note Integer,
+  photo ImageBlob,
+  numRib Long required
+}
+paginate Expert with pagination
+service Expert with serviceImpl
+filter Expert
+
+enum Domaine {
+    Informatique, Sante,
+    Marketing , Communication,
+    Juridique, Finance
+}
+
+entity NonDisponibilite {
+	date Instant required,
+    }
+
+entity HistoriqueAppel{
+	dateAppel LocalDate required,
+    description TextBlob required,
+    nomClient String required
+}
+
+entity HistoriqueChat{
+	dateAppel LocalDate required,
+    description TextBlob required,
+    nomClient String required
+}
+
+entity RendezVous{
+	start LocalDate required,
+    end LocalDate ,
+    title String required,
+    allDay Boolean,
+    url String
+}
+
+relationship OneToMany {
+	Expert{disponibilite} to NonDisponibilite,
+    Expert{historiqueAppel} to HistoriqueAppel,
+    Expert{historiqueChat} to HistoriqueChat,
+    Expert{rendezVous} to RendezVous
+}
+
+paginate HistoriqueChat with pagination
+paginate HistoriqueAppel with pagination
+paginate RendezVous with pagination
+service RendezVous, NonDisponibilite, HistoriqueAppel, HistoriqueChat with serviceImpl

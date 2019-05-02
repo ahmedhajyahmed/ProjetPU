@@ -1,0 +1,123 @@
+{
+    "name": "Expert",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateNaissance",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "adresse",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "domaine",
+            "fieldType": "Domaine",
+            "fieldValues": "Informatique,Sante,Marketing,Communication,Juridique,Finance",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "profession",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "skill1",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "skill2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "skill3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prix",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "photo",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "numRib",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nonDisponibilite",
+            "otherEntityRelationshipName": "expert",
+            "relationshipName": "disponibilite"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "historiqueAppel",
+            "otherEntityRelationshipName": "expert",
+            "relationshipName": "historiqueAppel"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "historiqueChat",
+            "otherEntityRelationshipName": "expert",
+            "relationshipName": "historiqueChat"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "rendezVous",
+            "otherEntityRelationshipName": "expert",
+            "relationshipName": "rendezVous"
+        }
+    ],
+    "changelogDate": "20190331171909",
+    "entityTableName": "expert",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
