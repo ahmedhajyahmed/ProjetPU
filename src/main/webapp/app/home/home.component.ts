@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
-
+import { HomeService } from './home.service';
 import { LoginModalService, AccountService, Account } from 'app/core';
 import { Expert } from 'app/shared/model/expert.model';
 import { ExpertService } from 'app/entities/expert';
@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     experts: Expert[] = [];
 
     constructor(
+        private svc: HomeService,
         private accountService: AccountService,
         private loginModalService: LoginModalService,
         private eventManager: JhiEventManager,
@@ -41,6 +42,9 @@ export class HomeComponent implements OnInit {
         });
         this.registerAuthenticationSuccess();
         this.loadAll();
+        this.svc.getData().subscribe(data => {
+            this.experts = data;
+        });
     }
 
     registerAuthenticationSuccess() {

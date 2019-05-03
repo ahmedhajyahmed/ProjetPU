@@ -258,7 +258,7 @@
             <div class="row align-items-center">
 
                 <div class="col-6 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Life<span>Coach</span> <span class="text-primary">.</span> </a></h1>
+                    <h1 class="mb-0 site-logo" style="width:220px"><a href="index.html" class="h2 mb-0">Ask an<span> Expert</span> <span class="text-primary">.</span> </a></h1>
                 </div>
 
                 <div class="col-12 col-md-10 d-none d-xl-block">
@@ -267,21 +267,6 @@
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                                 <a class="nav-link" routerLink="/" (click)="collapseNavbar()" >Home</a>
-                            </li>
-                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                <a href="#training-section" class="nav-link">About</a>
-                            </li>
-                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                <a href="#training-section" class="nav-link">Our Training</a>
-                            </li>
-                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                <a href="#services-section" class="nav-link">Services</a>
-                            </li>
-                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                <a href="#blog-section" class="nav-link">Blog</a>
-                            </li>
-                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                                <a href="#contact-section" class="nav-link">Contact</a>
                             </li>
 
 
@@ -476,7 +461,7 @@
 
                 <div class="col-md-6 mt-lg-5 ml-auto text-left align-self-end align-self-md-center">
                     <h1>Professional Life Coaching</h1>
-                    <p class="mb-4"><a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
+                    <p class="mb-4"><a routerLink="register" routerLinkActive="active" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
                 </div>
 
             </div>
@@ -485,14 +470,7 @@
 
     <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(../../../content/images/hero_1.jpg);" data-aos="fade" id="home-section1" *ngIf="isAuthenticated()">
         <div class="container">
-            <div class="row">
-
-                <div class="col-md-6 mt-lg-5 mr-auto text-left align-self-end align-self-md-center">
-                    <p>April 22, 2019 <span class="mx-3"></span> by John Doe</p>
-                    <h1>Blog Single Page Here</h1>
-                </div>
-
-            </div>
+           
         </div>
     </div>
 

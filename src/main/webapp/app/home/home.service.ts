@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
     providedIn: 'root'
 })
-export class sliderService {
+export class HomeService {
     constructor(private http: HttpClient) {}
 
     getData(): Observable<any[]> {

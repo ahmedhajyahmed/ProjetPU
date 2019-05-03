@@ -13,6 +13,7 @@ import { ExpertUpdateComponent } from './expert-update.component';
 import { ExpertDeletePopupComponent } from './expert-delete-dialog.component';
 import { IExpert } from 'app/shared/model/expert.model';
 import { AffichageAvanceComponent } from './affichage-avance.component';
+import { CalendarComponent } from '../../calendar/calendar.component';
 @Injectable({ providedIn: 'root' })
 export class ExpertResolve implements Resolve<IExpert> {
     constructor(private service: ExpertService) {}

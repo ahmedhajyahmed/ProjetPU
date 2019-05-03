@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { sliderService } from './slider.service';
 import { MethodCall } from '@angular/compiler';
 @Component({
     selector: 'jhi-slider',
@@ -8,14 +7,14 @@ import { MethodCall } from '@angular/compiler';
 })
 export class SliderComponent implements OnInit {
     experts: any[] = [];
-    constructor(private svc: sliderService) {}
+    constructor(/*private svc: sliderService*/) {}
 
-    method(): void {
+    /*method(): void {
         this.svc.getData().subscribe(data => {
             this.experts = data;
         });
-    }
+    }*/
     ngOnInit() {
-        this.method();
+       // this.method();
     }
 }
