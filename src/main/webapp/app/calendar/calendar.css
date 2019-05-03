@@ -11,6 +11,13 @@
     z-index: 20;
 }
 
+.pop-upRV {
+    position: fixed;
+    animation: drop 0.5s ease forwards;
+    z-index: 20;
+    top: 20;
+}
+
 @keyframes drop {
     0% {
         opacity: 0;

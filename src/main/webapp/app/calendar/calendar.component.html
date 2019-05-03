@@ -1,7 +1,7 @@
 
 <full-calendar class="calendar"
             (eventClick)="handleEventClick($event)"
-            (click)="handleDateClick($event)"
+            (dayRender)="handleDateClick($event)"
             [plugins]="calendarPlugins"
              eventOrder="title"
             [header]="{center: 'dayGridMonth,timeGridWeek'}"
@@ -51,7 +51,7 @@
 
 
 <div >
-    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info pop-up" id="pop-up-insere" role="document"  style="display: none">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info pop-upRV" id="pop-up-insere" role="document"  style="display: none">
 
         <div class="modal-content">
 
