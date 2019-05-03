@@ -12,7 +12,9 @@
 }
 
 .pop-upRV {
-    position: fixed;
+    position: absolute;
+    top: -500px;
+    left: 0;
     animation: drop 0.5s ease forwards;
     z-index: 20;
     top: 20;

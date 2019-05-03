@@ -276,6 +276,10 @@
                                 <a class="nav-link" routerLink="calendar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Calendar</a>
                             </li>
 
+                            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *jhiHasAnyAuthority="['ROLE_EXPERT', 'ROLE_USER']">
+                                <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Chat</a>
+                            </li>
+
                             <!-- nav bar for user  -->
 
                             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *jhiHasAnyAuthority="['ROLE_USER']">
