@@ -16,19 +16,35 @@ export class CalendarComponent implements OnInit {
     calendarPlugins = [dayGridPlugin, timeGridPlugin, listPlugin, bootstrapPlugin];
     calendarEvents: any[] = [];
     rendezVous: IRendezVous;
+    title: any;
     expert: any;
     constructor(private svc: CalendarService) {}
 
     handleEventClick(info) {
         // handler method
-        // const popup = document.getElementById('pop-up');
-        // popup.style.display = 'block';
-
-        alert('Event: ' + info.event.title);
-        alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
-        alert('View: ' + info.view.type);
+        this.title = info.event.title;
+        const popup = document.getElementById('pop-up-affiche');
+        popup.style.display = 'block';
+        // alert('Event: ' + info.event.title);
+        // alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+        // alert('View: ' + info.view.type);
         info.el.style.borderColor = 'red';
         info.jsEvent.preventDefault();
+    }
+
+    closePopupAffiche() {
+        const popup = document.getElementById('pop-up-affiche');
+        popup.style.display = 'none';
+    }
+
+    handleDateClick(info) {
+        const popup = document.getElementById('pop-up-insere');
+        popup.style.display = 'block';
+    }
+
+    closePopupInsere() {
+        const popup = document.getElementById('pop-up-insere');
+        popup.style.display = 'none';
     }
 
     putData(arg) {
