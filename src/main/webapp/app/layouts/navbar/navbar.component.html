@@ -470,13 +470,26 @@
 
 
 
-    <div class="site-blocks-cover overlay" style="background-image: url(../../../content/images/hero_1.jpg);" data-aos="fade" id="home-section">
+    <div class="site-blocks-cover overlay" style="background-image: url(../../../content/images/hero_1.jpg);" data-aos="fade" id="home-section" *ngIf="!isAuthenticated()">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-6 mt-lg-5 ml-auto text-left align-self-end align-self-md-center">
                     <h1>Professional Life Coaching</h1>
                     <p class="mb-4"><a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(../../../content/images/hero_1.jpg);" data-aos="fade" id="home-section1" *ngIf="isAuthenticated()">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 mt-lg-5 mr-auto text-left align-self-end align-self-md-center">
+                    <p>April 22, 2019 <span class="mx-3"></span> by John Doe</p>
+                    <h1>Blog Single Page Here</h1>
                 </div>
 
             </div>
